@@ -33,7 +33,6 @@ public class ContactListActivity extends AppCompatActivity {
         contactosButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Crear un Intent para volver a la actividad principal (MainActivity)
                 Intent intent = new Intent(ContactListActivity.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -49,16 +48,13 @@ public class ContactListActivity extends AppCompatActivity {
 
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                // Dividir la línea en partes usando el carácter ";" como delimitador
                 String[] parts = line.split(";");
 
-                // Crear una cadena formateada para cada contacto
                 String formattedContact = "Nombre: " + parts[0] + "\n" +
                         "Cognoms: " + parts[1] + "\n" +
                         "Telèfon: " + parts[2] + "\n" +
                         "Email: " + parts[3];
 
-                // Agregar la cadena formateada a la lista
                 contacts.add(formattedContact);
             }
 
