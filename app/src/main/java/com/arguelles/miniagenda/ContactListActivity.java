@@ -50,7 +50,7 @@ public class ContactListActivity extends AppCompatActivity {
             while ((line = bufferedReader.readLine()) != null) {
                 String[] parts = line.split(";");
 
-                String formattedContact = "Nombre: " + parts[0] + "\n" +
+                String formattedContact = "Nom: " + parts[0] + "\n" +
                         "Cognoms: " + parts[1] + "\n" +
                         "Telèfon: " + parts[2] + "\n" +
                         "Email: " + parts[3];
